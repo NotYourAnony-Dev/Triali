@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notyouranonymous_ // Aryan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&family=Plus+Jakarta+Sans:wght@300;400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Syne', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        dark: '#0A0A0C',
+                        charcoal: '#121216',
+                        neonCrimson: '#FF2A54',
+                        neonPurple: '#9D4EDD',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(18, 18, 22, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-crimson:hover {
+            box-shadow: 0 0 25px rgba(255, 42, 84, 0.25);
+            border-color: rgba(255, 42, 84, 0.4);
+        }
+        .glow-purple:hover {
+            box-shadow: 0 0 25px rgba(157, 78, 221, 0.25);
+            border-color: rgba(157, 78, 221, 0.4);
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0A0A0C; }
+        ::-webkit-scrollbar-thumb { background: #121216; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #FF2A54; }
+    </style>
+</head>
+<body class="bg-dark text-gray-300 font-body overflow-x-hidden antialiased">
+
+    <canvas id="rainCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 opacity-20"></canvas>
+
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="font-display font-extrabold text-xl tracking-wider text-white">
+            N<span class="text-neonCrimson">YA</span>_
+        </div>
+        <div class="hidden md:flex space-x-8 font-mono text-xs uppercase tracking-widest text-gray-400">
+            <a href="#about" class="hover:text-white transition-colors">// ABOUT</a>
+            <a href="#gallery" class="hover:text-white transition-colors">// VISUALS</a>
+            <a href="#skills" class="hover:text-white transition-colors">// EXPERTISE</a>
+            <a href="#projects" class="hover:text-white transition-colors">// ARCHIVE</a>
+            <a href="#terminal" class="hover:text-white transition-colors">// CONSOLE</a>
+        </div>
+        <div class="font-mono text-xs text-neonPurple bg-neonPurple/10 px-3 py-1 rounded border border-neonPurple/20">
+            SYS STATUS: ONLINE
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex flex-col justify-center px-6 md:px-24 z-10 pt-20">
+        <div class="max-w-4xl space-y-4">
+            <p class="font-mono text-neonCrimson text-sm tracking-widest uppercase animate-pulse">// INITIALIZING DEVELOPMENT HUB</p>
+            <h1 class="font-display text-6xl md:text-8xl font-black text-white tracking-tight uppercase leading-none">
+                Aryan <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-400 to-gray-700 font-mono text-3xl md:text-5xl lowercase block mt-2">notyouranonymous_</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 font-light max-w-xl">
+                Coder • Creator • Night Owl. Building advanced digital architecture from the shadows. Aspiring Germany-based developer.
+            </p>
+            
+            <div class="font-mono text-sm text-neonPurple bg-charcoal/50 p-3 rounded-lg border border-white/5 inline-block max-w-full">
+                <span class="text-gray-500">$</span> <span id="typing-text">Building code in the dark.</span><span class="animate-ping">|</span>
+            </div>
+
+            <div class="pt-6">
+                <a href="#projects" class="inline-block font-display font-bold text-xs uppercase tracking-widest bg-white text-black px-8 py-4 rounded-none hover:bg-neonCrimson hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-white/5">
+                    Enter My World
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 right-6 md:right-24 glass-panel p-4 rounded-xl border border-white/5 flex items-center space-x-4 max-w-sm font-mono text-xs">
+            <div class="w-2 h-2 rounded-full bg-green-500 animate-ping"></div>
+            <div>
+                <p class="text-white font-bold">CURRENT TRACK</p>
+                <p class="text-gray-400 text-[11px]">Lo-Fi Midnight Beats - Tokyo Edition</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="min-h-screen py-32 px-6 md:px-24 z-10 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <h2 class="font-display text-4xl font-bold text-white uppercase"><span class="text-neonCrimson">//</span> THE DOSSIER</h2>
+                <hr class="border-white/10">
+                <p class="text-gray-400 leading-relaxed text-base">
+                    Operating on the cutting edge of the late-night hours, I craft responsive solutions and advanced digital structures. Driven by clean design principles, problem-solving, and the precision of the Apple ecosystem, my development philosophy balances absolute aesthetics with reliable execution.
+                </p>
+                <p class="text-gray-400 leading-relaxed text-base">
+                    When I am not deep inside code repositories refining complex automated structures, I analyze high-level strategies in BGMI, immerse myself in dark psychological anime narratives, and methodically map out my grand trajectory toward the technology hubs of Germany.
+                </p>
+            </div>
+            
+            <div class="lg:col-span-5 relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-neonCrimson to-neonPurple opacity-10 blur-xl group-hover:opacity-20 transition-all"></div>
+                <div class="relative w-full aspect-[4/5] bg-gradient-to-b from-charcoal to-dark border border-white/10 rounded-xl overflow-hidden flex items-center justify-center">
+                    <img src="https://i.ibb.co/LhdZrS9z/tmpyzglm5nz.jpg" alt="Aryan Luxury Core Photo 5" class="w-full h-full object-cover mix-blend-luminosity opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute bottom-4 left-4 font-mono text-[10px] tracking-widest text-white/40 bg-black/80 px-3 py-1 border border-white/5">
+                        CORE_DOSSIER // FILE_05
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 px-6 md:px-24 z-10 relative bg-charcoal/10 border-y border-white/5">
+        <div class="mb-12">
+            <h2 class="font-display text-3xl font-bold text-white uppercase"><span class="text-neonPurple">//</span> ENVIRONMENTAL TELEMETRY</h2>
+            <p class="text-gray-500 font-mono text-xs uppercase tracking-widest mt-1">Curated interface snapshots and ambient framing</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-panel rounded-xl overflow-hidden group border border-white/5 hover:border-neonPurple/30 transition-all duration-500">
+                <div class="aspect-square bg-black overflow-hidden relative">
+                    <img src="https://i.ibb.co/LhdZrS9z/tmpyzglm5nz.jpg" alt="Asset 1" class="w-full h-full object-cover opacity-40 group-hover:opacity-70 group-hover:scale-110 transition-all duration-500">
+                    <span class="absolute bottom-3 left-3 font-mono text-[9px] text-gray-400 bg-dark/80 px-2 py-0.5 border border-white/5">SYS_IMG_01</span>
+                </div>
+            </div>
+            <div class="glass-panel rounded-xl overflow-hidden group border border-white/5 hover:border-neonCrimson/30 transition-all duration-500">
+                <div class="aspect-square bg-black overflow-hidden relative">
+                    <img src="https://i.ibb.co/JFsSbb4B/tmp5agfhrhe.jpg" alt="Asset 2 - Photo 6" class="w-full h-full object-cover opacity-40 group-hover:opacity-70 group-hover:scale-110 transition-all duration-500">
+                    <span class="absolute bottom-3 left-3 font-mono text-[9px] text-gray-400 bg-dark/80 px-2 py-0.5 border border-white/5">SYS_IMG_02 (P6)</span>
+                </div>
+            </div>
+            <div class="glass-panel rounded-xl overflow-hidden group border border-white/5 hover:border-neonPurple/30 transition-all duration-500">
+                <div class="aspect-square bg-black overflow-hidden relative">
+                    <img src="https://i.ibb.co/4ZwkFbd0/tmpxxdz8gze.jpg" alt="Asset 3" class="w-full h-full object-cover opacity-40 group-hover:opacity-70 group-hover:scale-110 transition-all duration-500">
+                    <span class="absolute bottom-3 left-3 font-mono text-[9px] text-gray-400 bg-dark/80 px-2 py-0.5 border border-white/5">SYS_IMG_03</span>
+                </div>
+            </div>
+            <div class="glass-panel rounded-xl overflow-hidden group border border-white/5 hover:border-neonCrimson/30 transition-all duration-500">
+                <div class="aspect-square bg-black overflow-hidden relative">
+                    <img src="https://i.ibb.co/TqBFHxBc/tmpi8h0hcqs.jpg" alt="Asset 4" class="w-full h-full object-cover opacity-40 group-hover:opacity-70 group-hover:scale-110 transition-all duration-500">
+                    <span class="absolute bottom-3 left-3 font-mono text-[9px] text-gray-400 bg-dark/80 px-2 py-0.5 border border-white/5">SYS_IMG_04</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-32 px-6 md:px-24 z-10 relative">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-display text-4xl font-bold text-white uppercase mb-12 text-center"><span class="text-neonPurple">//</span> ARSENAL & CAPABILITIES</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-panel p-6 rounded-xl transition-all duration-300 glow-crimson">
+                    <div class="flex justify-between font-mono text-sm mb-2">
+                        <span class="text-white">Python & Systems Engineering</span>
+                        <span class="text-neonCrimson">90%</span>
+                    </div>
+                    <div class="w-full bg-white/5 h-[4px] rounded-full overflow-hidden">
+                        <div class="bg-neonCrimson h-full w-[90%] rounded-full"></div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-xl transition-all duration-300 glow-purple">
+                    <div class="flex justify-between font-mono text-sm mb-2">
+                        <span class="text-white">JavaScript / Modern Web</span>
+                        <span class="text-neonPurple">85%</span>
+                    </div>
+                    <div class="w-full bg-white/5 h-[4px] rounded-full overflow-hidden">
+                        <div class="bg-neonPurple h-full w-[85%] rounded-full"></div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-xl transition-all duration-300 glow-purple">
+                    <div class="flex justify-between font-mono text-sm mb-2">
+                        <span class="text-white">UI/UX Design & Luxury Framing</span>
+                        <span class="text-neonPurple">80%</span>
+                    </div>
+                    <div class="w-full bg-white/5 h-[4px] rounded-full overflow-hidden">
+                        <div class="bg-neonPurple h-full w-[80%] rounded-full"></div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-xl transition-all duration-300 glow-crimson">
+                    <div class="flex justify-between font-mono text-sm mb-2">
+                        <span class="text-white">Visual Editing & Rendering</span>
+                        <span class="text-neonCrimson">88%</span>
+                    </div>
+                    <div class="w-full bg-white/5 h-[4px] rounded-full overflow-hidden">
+                        <div class="bg-neonCrimson h-full w-[88%] rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 px-6 md:px-24 z-10 relative bg-charcoal/20">
+        <h2 class="font-display text-4xl font-bold text-white uppercase mb-4"><span class="text-neonCrimson">//</span> SECURE PROJECTS DEPLOYED</h2>
+        <p class="text-gray-500 font-mono text-xs uppercase tracking-widest mb-12">Click index files to read telemetry data</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-panel rounded-xl overflow-hidden group transition-all duration-500 hover:-translate-y-2 border border-white/5 hover:border-neonCrimson/40">
+                <div class="h-40 bg-black relative overflow-hidden">
+                    <img src="https://i.ibb.co/230PMWtV/tmp0b3wj047.jpg" alt="Anime Website Project" class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                </div>
+                <div class="p-5 space-y-2">
+                    <span class="font-mono text-[9px] text-neonCrimson tracking-widest uppercase">// PORTAL ARCHITECTURE</span>
+                    <h3 class="font-display text-lg font-bold text-white">Anime Interface</h3>
+                    <p class="text-gray-400 text-xs font-light">Custom media platform with highly precise, micro-interaction components.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-xl overflow-hidden group transition-all duration-500 hover:-translate-y-2 border border-white/5 hover:border-neonPurple/40">
+                <div class="h-40 bg-black relative overflow-hidden">
+                    <img src="https://i.ibb.co/mCSr1MH8/tmpqiztph7a.jpg" alt="BGMI Tracker Project" class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                </div>
+                <div class="p-5 space-y-2">
+                    <span class="font-mono text-[9px] text-neonPurple tracking-widest uppercase">// TELEMETRY ENGINE</span>
+                    <h3 class="font-display text-lg font-bold text-white">BGMI Match Tracker</h3>
+                    <p class="text-gray-400 text-xs font-light">Advanced metric processing core managing player data and tactical matches.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-xl overflow-hidden group transition-all duration-500 hover:-translate-y-2 border border-white/5 hover:border-neonCrimson/40">
+                <div class="h-40 bg-black relative overflow-hidden">
+                    <img src="https://i.ibb.co/xq8zPCRY/tmpcm200qq9.jpg" alt="AI Frameworks Project" class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                </div>
+                <div class="p-5 space-y-2">
+                    <span class="font-mono text-[9px] text-neonCrimson tracking-widest uppercase">// CORE MACHINE INTELLIGENCE</span>
+                    <h3 class="font-display text-lg font-bold text-white">AI Automation Tools</h3>
+                    <p class="text-gray-400 text-xs font-light">Automating tasks using custom predictive algorithms and processing systems.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-xl overflow-hidden group transition-all duration-500 hover:-translate-y-2 border border-white/5 hover:border-neonPurple/40">
+                <div class="h-40 bg-black relative overflow-hidden">
+                    <img src="https://i.ibb.co/XxG8trz8/tmp4a5rsnek.jpg" alt="Discord Bot Project" class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                </div>
+                <div class="p-5 space-y-2">
+                    <span class="font-mono text-[9px] text-neonPurple tracking-widest uppercase">// BOT ARCHITECTURE</span>
+                    <h3 class="font-display text-lg font-bold text-white">Custom Discord Engine</h3>
+                    <p class="text-gray-400 text-xs font-light">High-concurrency systems featuring custom economies and full administrative controls.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="terminal" class="py-20 px-6 md:px-24 z-10 relative">
+        <div class="max-w-3xl mx-auto glass-panel rounded-lg border border-white/10 overflow-hidden shadow-2xl">
+            <div class="bg-charcoal px-4 py-2 flex items-center justify-between border-b border-white/5">
+                <div class="flex space-x-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500/60"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500/60"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500/60"></div>
+                </div>
+                <span class="font-mono text-xs text-gray-500">aryan@mainframe:~</span>
+                <span></span>
+            </div>
+            <div class="p-6 font-mono text-sm space-y-4 bg-black/40">
+                <p class="text-gray-500">// Type 'help' to see available directory commands</p>
+                <div class="flex items-center space-x-2">
+                    <span class="text-neonCrimson">guest@notyouranonymous_~$</span>
+                    <input type="text" class="bg-transparent border-none outline-none text-white w-full focus:ring-0" placeholder="try 'skills' or 'destination'...">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/5 py-12 px-6 md:px-24 z-10 relative flex flex-col md:flex-row justify-between items-center gap-6 bg-black">
+        <div class="font-mono text-xs text-gray-500">
+            &copy; 2026 NOTYOURANONYMOUS_. ALL RIGHTS RESERVED COVERTLY.
+        </div>
+        <div class="flex space-x-6 font-mono text-xs">
+            <a href="#" class="text-gray-400 hover:text-neonCrimson transition-colors">TG // Telegram</a>
+            <a href="#" class="text-gray-400 hover:text-neonPurple transition-colors">IG // Instagram</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">GH // GitHub</a>
+        </div>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('rainCanvas');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        const rainDrops = Array.from({ length: 70 }, () => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            length: Math.random() * 20 + 10,
+            speed: Math.random() * 15 + 10
+        }));
+
+        function drawRain() {
+            ctx.clearRect(0, 0, width, height);
+            ctx.strokeStyle = 'rgba(255, 42, 84, 0.15)';
+            ctx.lineWidth = 1;
+            
+            rainDrops.forEach(drop => {
+                ctx.beginPath();
+                ctx.moveTo(drop.x, drop.y);
+                ctx.lineTo(drop.x, drop.y + drop.length);
+                ctx.stroke();
+                
+                drop.y += drop.speed;
+                if (drop.y > height) {
+                    drop.y = -drop.length;
+                    drop.x = Math.random() * width;
+                }
+            });
+            requestAnimationFrame(drawRain);
+        }
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        drawRain();
+    </script>
+</body>
+</html>
